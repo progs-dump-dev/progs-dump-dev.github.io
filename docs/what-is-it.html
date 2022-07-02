@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="./favicon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="./pd.css"/>
+    <meta http-equiv="content-security-policy" content="">
+	<link rel="modulepreload" href="/_app/immutable/start-d371e788.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-3d24b05e.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-453d28bf.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/what-is-it.svelte-43d76304.js">
+</head>
+<body>
+
+
+
+    
+
+
+<nav class="navbar p-centered mx-2"><section class="navbar-section"><a class="navbar-brand" href="/"><img alt="progs_dump" src="/pd_words.png"></a>
+        <a class="btn btn-link" href="/what-is-it">What is it?</a>
+        <a class="btn btn-link" href="/manual">Manual</a>
+        <a class="btn btn-link" href="/download">Download</a>
+        <a class="btn btn-link" href="/credits">Credits</a></section></nav>
+<div class="divider"></div>
+<div class="container grid-xl"><div class="card bg-warning"><div class="card-body">This site is under construction - please ignore any formatting errors for now!
+    </div>
+</div><div class=""><h1>What is progs_dump?</h1>
+    <p>progs_dump is a development kit for id software’s Quake. Its purpose is to give mappers more creative options and
+        “quality-of-life” improvements over the original “vanilla” version of the game. The progs_dump dev kit has
+        dozens of unique and powerful features that are explained in this manual, in the FGDs and in the included sample
+        maps.</p>
+
+    <p>The best way to get an overview of all these features is to load up the start map and play through the short
+        sample levels. Only a few of these have monsters and not every feature is shown but the majority are.</p>
+    <div class="card"><div class="card-image"><img style="width:100%" alt="start map picture" src="/what-is-it/startmap.png"></div>
+        <div class="card-footer">Many maps demonstrating the new features are available from the start map.</div></div>
+    <div class="divider"></div>
+
+    <h2>The devkit consists of two elements:</h2>
+
+    <p>First, there’s the progs_dump “mod” folder. This holds all the sample maps, mapping assets, source code and the
+        documentation you are reading now.</p>
+
+    <p>The second element is the my_mod folder inside the mod_template.zip file. This is a streamlined version of
+        progs_dump with just the assets you need to make your mod.</p>
+    <div class="divider"></div>
+    <h2>The workflow is simple:</h2>
+
+    Use the progs_dump mod as a reference and learning tool, then create your own Quake mod with the my_mod folder as a
+    base.
+<br>
+<br>
+    <div class="columns"><div class="column col-xl-12 col-8 col-mx-auto"><div class="card bg-warning"><div class="card-body">Your project should be released as a stand-alone mod and installed into its own
+                    folder in the Quake directory, NOT in progs_dump.
+                </div></div></div></div>
+    <br>
+    <div class="divider"></div>
+    <h2>What can you do with progs_dump?</h2>
+    The devkit started as a simple project to add custom sounds and models to the game but has grown into a powerful
+    toolkit aimed at beginner and intermediate mappers. Most features are from existing mods both old and recent, but
+    there is a lot of new and unique code as well.
+    <div class="divider"></div>
+    <h2>Features include:</h2>
+    <div class="card mb-2"><div class="card-header"><h4>Monster Customization:</h4></div>
+        <div class="card-body">No other Quake mod allows this amount of customization in such an easy way.
+            <ul><li>Add custom sounds, skins, models, health, damage, names, obituaries and much more without any coding
+                    required. This includes customizing monsters’ heads, gibs and projectiles.
+                </li>
+                <li>Grunts, Enforcers, Shamblers, Hellknights and Ogres have multiple new attack options</li>
+                <li>Killable, gibbable versions of the original Quake bosses</li>
+                <li>Rotfish even gib</li></ul></div></div>
+    <div class="card mb-2"><div class="card-header"><h4>Quality-of-Life Features:</h4></div>
+        <div class="card-body"><ul><li>Trigger spawned monsters</li>
+                <li>continuous monster spawning</li>
+                <li>random monster spawning</li>
+                <li>Respawn items and suspend them in mid-air</li>
+                <li>Custom backpack pickups</li>
+                <li>drag and drop gore decorations</li>
+                <li>create visual effects like explosions and lightning effects</li>
+                <li>Custom models, sprites and sound effects</li>
+                <li>Multiple targets and targetnames</li>
+                <li>dormant triggers</li>
+                <li>enhanced platforms</li>
+
+                <li>Unique new features like trigger_look, sight_trigger, pain_target, Doom-style door behaviors and
+                    item_key_custom.
+                </li>
+
+                <li>Mission pack additions like custom gravity triggers, rotating entities, candles and proper
+                    elevators.
+                </li>
+
+                <li>Enhanced teleporters with random destinations, monster only options, changeable destinations and
+                    more.
+                </li>
+
+                <li>ladders</li>
+                <li>cutscenes</li>
+                <li>breakables with an “easy” method and a completely “custom” method.</li>
+
+                <li>Noclip enables notarget and ignores most touch events</li></ul></div></div>
+    <div class="card mb-2"><div class="card-header"><h4>Bug fixes</h4></div>
+        <div class="card-body">Traditional fixes to the Shambler’s collision during combat, the Rotfish “kill count” bug, door unlock
+            sounds and many more “under-the-hood” code fixes. This includes fixes to the mission packs QuakeC as well.
+            <br>
+            <br>
+            In version 3.0.0 we’ve included most of the Quake Info Pool fixes as well.
+        </div></div></div></div>
+
+
+		<script type="module" data-sveltekit-hydrate="14nlqm2">
+		import { start } from "/_app/immutable/start-d371e788.js";
+		start({
+			target: document.querySelector('[data-sveltekit-hydrate="14nlqm2"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [0, 9],
+				params: {},
+				routeId: "what-is-it"
+			}
+		});
+	</script>
+
+</body>
+</html>

@@ -1,7 +1,13 @@
 <script>
-    import Divider from "../divider.svelte";
+    import Divider from "$components/Divider.svelte";
+    import Page from "$components/Page.svelte";
+    import Card from "$components/Card.svelte"
+    import CardHeader from "$components/CardHeader.svelte"
+    import CardBody from "$components/CardBody.svelte"
+    import Columns from "$components/Columns.svelte"
+    import Column from "$components/Column.svelte"
 </script>
-<div class="">
+<Page>
     <h1>What is progs_dump?</h1>
     <p>progs_dump is a development kit for id software’s Quake. Its purpose is to give mappers more creative options and
         “quality-of-life” improvements over the original “vanilla” version of the game. The progs_dump dev kit has
@@ -10,12 +16,12 @@
 
     <p>The best way to get an overview of all these features is to load up the start map and play through the short
         sample levels. Only a few of these have monsters and not every feature is shown but the majority are.</p>
-    <div class="card">
+    <Card>
         <div class="card-image">
-    <img style="width:100%" alt="start map picture" src="/what-is-it/startmap.png"/>
+            <img style="width:100%" alt="start map picture" src="/what-is-it/startmap.png"/>
         </div>
         <div class="card-footer">Many maps demonstrating the new features are available from the start map.</div>
-    </div>
+    </Card>
     <Divider/>
 
     <h2>The devkit consists of two elements:</h2>
@@ -30,18 +36,16 @@
 
     Use the progs_dump mod as a reference and learning tool, then create your own Quake mod with the my_mod folder as a
     base.
-<br/>
-<br/>
-    <div class="columns">
-        <div class="column col-xl-12 col-8 col-mx-auto">
-            <div class="card bg-warning">
-                <div class="card-body">Your project should be released as a stand-alone mod and installed into its own
+    <Columns>
+        <Column col="8" xl="12" mxAuto="true">
+            <Card color="warning">
+                <CardBody>Your project should be released as a stand-alone mod and installed into its own
                     folder in the Quake directory, NOT in progs_dump.
-                </div>
-            </div>
-        </div>
-    </div>
-    <br/>
+                </CardBody>
+            </Card>
+        </Column>
+    </Columns>
+
     <Divider/>
     <h2>What can you do with progs_dump?</h2>
     The devkit started as a simple project to add custom sounds and models to the game but has grown into a powerful
@@ -49,11 +53,9 @@
     there is a lot of new and unique code as well.
     <Divider/>
     <h2>Features include:</h2>
-    <div class="card mb-2">
-        <div class="card-header">
-            <h4>Monster Customization:</h4>
-        </div>
-        <div class="card-body">
+    <Card>
+        <CardHeader>Monster Customization</CardHeader>
+        <CardBody>
             No other Quake mod allows this amount of customization in such an easy way.
             <ul>
                 <li>Add custom sounds, skins, models, health, damage, names, obituaries and much more without any coding
@@ -62,13 +64,14 @@
                 <li>Grunts, Enforcers, Shamblers, Hellknights and Ogres have multiple new attack options</li>
                 <li>Killable, gibbable versions of the original Quake bosses</li>
                 <li>Rotfish even gib</li>
-        </div>
-    </div>
-    <div class="card mb-2">
-        <div class="card-header">
-            <h4>Quality-of-Life Features:</h4>
-        </div>
-        <div class="card-body">
+            </ul>
+        </CardBody>
+    </Card>
+    <Card>
+        <CardHeader>
+            Quality-of-Life Features
+        </CardHeader>
+        <CardBody>
             <ul>
                 <li>Trigger spawned monsters</li>
                 <li>continuous monster spawning</li>
@@ -100,18 +103,16 @@
 
                 <li>Noclip enables notarget and ignores most touch events</li>
             </ul>
-        </div>
-    </div>
-    <div class="card mb-2">
-        <div class="card-header">
-            <h4>Bug fixes</h4>
-        </div>
-        <div class="card-body">
+        </CardBody>
+    </Card>
+    <Card>
+        <CardHeader>Bug fixes</CardHeader>
+        <CardBody>
             Traditional fixes to the Shambler’s collision during combat, the Rotfish “kill count” bug, door unlock
             sounds and many more “under-the-hood” code fixes. This includes fixes to the mission packs QuakeC as well.
             <br/>
             <br/>
             In version 3.0.0 we’ve included most of the Quake Info Pool fixes as well.
-        </div>
-    </div>
-</div>
+        </CardBody>
+    </Card>
+</Page>

@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="./pd.css"/>
     <meta http-equiv="content-security-policy" content="">
-	<link rel="modulepreload" href="/_app/immutable/start-d371e788.js">
+	<link rel="stylesheet" href="/_app/immutable/assets/pages/manual/index.svelte-7e109ccf.css">
+	<link rel="modulepreload" href="/_app/immutable/start-194475fe.js">
 	<link rel="modulepreload" href="/_app/immutable/chunks/index-3d24b05e.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-453d28bf.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/manual/__layout.svelte-1e23cb18.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/manual/index.svelte-07cd1751.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-4d5e7756.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/manual/__layout.svelte-a6567e6e.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/Page-9e348147.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/Column-fb82418a.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/manual/index.svelte-93c8ae8c.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/CardBody-c9d0a4e2.js">
 </head>
 <body>
 
@@ -20,22 +24,73 @@
 
 
 <nav class="navbar p-centered mx-2"><section class="navbar-section"><a class="navbar-brand" href="/"><img alt="progs_dump" src="/pd_words.png"></a>
+        <div class="col-mx-auto"></div>
         <a class="btn btn-link" href="/what-is-it">What is it?</a>
         <a class="btn btn-link" href="/manual">Manual</a>
         <a class="btn btn-link" href="/download">Download</a>
         <a class="btn btn-link" href="/credits">Credits</a></section></nav>
 <div class="divider"></div>
-<div class="container grid-xl"><div class="card bg-warning"><div class="card-body">This site is under construction - please ignore any formatting errors for now!
-    </div>
-</div><div class="columns"><div class="column col-2"><nav><ul style="list-style: none"><li><a href="/manual">Index</a></li>
-                <li><a href="/manual/spawnflags">Spawnflags</a></li></ul></nav></div>
-     <div class="column col-10"></div></div></div>
+<div class="container"><div class="card bg-warning"><div class="card-body">This site is under construction - please ignore any formatting errors for now!
+        </div></div></div>
+<div class="container "><div class="columns my-1"><div class="column col-2         "><nav><ul style="list-style: none"><li><a href="/manual">Installation</a></li>
+                <li class="ml-2"><a href="/manual#dev-notes">Development Notes</a></li>
+                <li><a href="/manual/spawnflags">Spawnflags</a></li>
+                <li class="ml-2"><a class="" href="/manual/spawnflags#trigger-spawn">Trigger Spawned Monsters</a></li>
+                <li class="ml-2"><a class="" href="/manual/spawnflags#appearance-flags">Appearance Flags</a></li></ul></nav></div>
+    <div class="column col-1         divider-vert"></div>
+    <div class="column col-9         "><h1>Installation</h1>
+
+<div class="card my-2  bg-warning"><div class="card-body">Do not copy new versions of progs_dump over existing installations. It’s always best to make a new folder and
+        move any work-in-progress maps and assets there.
+    </div></div>
+<ol><li class="svelte-mspql0">Unzip the <em>progs_dump</em> archive into your Quake folder. This will create a <em>pd_300</em> folder inside.
+        This directory will be a learning tool and reference for the features of the dev kit. Play it like any other
+        Quake mod using the start map to explore a hub with sample maps.
+        <br>
+        The <a href="/manual/devfolder">development folder</a> contains the FGD and DEF files that allow JACK,
+        TrenchBroom and other editors to use the features of the devkit. Please refer to your map editor documentation
+        for information on how to load mods and FGD files. In addition, there is a wad file that you can use to load the
+        textures used in the sample maps. The QuakeC source code is included as well.
+    </li>
+    <div class="card my-2  bg-error"><div class="card-body">Please read progs_dump-3.0.0-README.txt for important info and any last minute changes.
+        </div></div>
+
+    <li class="svelte-mspql0">When you are ready to create your own mod, unzip the <em>mod_template.zip</em> into your Quake directory and
+        rename the <em>my_mod</em> folder to the name of your mod (lowercase with no spaces). This folder is a stripped
+        down version of <em>progs_dump</em> without the sample maps and other files. However, the new models, sounds,
+        sprites, progs.dat and QuakeC source code are included.
+    </li>
+
+    <li class="svelte-mspql0">When you are ready to release your mod, zip up your mod directory and make sure to include the <em>progs_dump-devkit-readme.txt</em>
+        file and the QuakeC source folders in your release. If you modify the QuakeC code, make sure and include that
+        version in your zip instead of the original QuakeC files.
+    </li>
+    <div class="card my-2 bg-warning "><div class="card-body">Remove any cfg files, screenshots or save game files before zipping up your mod folder!
+        </div></div>
+    <li class="svelte-mspql0">Please do not include the original <em>progs_dump</em> sample maps in your mod. But feel free to use the entity
+        setups from the samples and prefab maps in your own projects. e.g. particle effects or custom monster entities.
+    </li>
+
+    <li class="svelte-mspql0">Make sure and share your work on the progs_dump dev Discord.
+    </li></ol>
+Good luck and happy modding!
+<br>
+<br>
+<h3 id="dev-notes">Development Notes</h3>
+<ul><li class="svelte-mspql0">You can launch Quake with <em>-nomonsters</em> on the command line to disable monsters in your map for testing. You can also set
+        <em>nomonsters</em> to 1 in the console and enter <em>restart</em> to relaunch your current map without monsters.</li>
+    <li class="svelte-mspql0">To check what version of the dev kit you are running, type <em>impulse 100</em> in the console.</li>
+    <li class="svelte-mspql0">While using the <em>noclip</em> command, you will not collide with item pickups and many triggers.</li>
+    <li class="svelte-mspql0">The cheat code <em>impulse 9</em> will give the player any <a href="/manual/keys">custom keys</a> used in the current map in addition to all ammo, weapons and standard keys.</li>
+    <li class="svelte-mspql0">Triggers that feature the <em>message</em> key have a new spawnflag <em>Message All Players</em>. This is useful for co-op gameplay if it’s important that every player get the message.</li>
+    <li class="svelte-mspql0">The FGDs are not included in the my_mod folder since they aren’t required to play your mod. For more info on loading FGDs, refer to the documentation for your editor of choice.</li>
+</ul></div></div></div>
 
 
-		<script type="module" data-sveltekit-hydrate="i7cukg">
-		import { start } from "/_app/immutable/start-d371e788.js";
+		<script type="module" data-sveltekit-hydrate="2a1ktj">
+		import { start } from "/_app/immutable/start-194475fe.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="i7cukg"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="2a1ktj"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -44,7 +99,7 @@
 			hydrate: {
 				status: 200,
 				error: null,
-				nodes: [0, 2, 6],
+				nodes: [0, 2, 7],
 				params: {},
 				routeId: "manual"
 			}

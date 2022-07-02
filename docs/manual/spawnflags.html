@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="../pd.css"/>
     <meta http-equiv="content-security-policy" content="">
-	<link rel="modulepreload" href="/_app/immutable/start-d371e788.js">
+	<link rel="modulepreload" href="/_app/immutable/start-194475fe.js">
 	<link rel="modulepreload" href="/_app/immutable/chunks/index-3d24b05e.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-453d28bf.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/manual/__layout.svelte-1e23cb18.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/manual/spawnflags.svelte-3ae79d67.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-4d5e7756.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/manual/__layout.svelte-a6567e6e.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/Page-9e348147.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/Column-fb82418a.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/manual/spawnflags.svelte-f424fba8.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/Divider-3642d24e.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/CardBody-c9d0a4e2.js">
 </head>
 <body>
 
@@ -20,54 +24,90 @@
 
 
 <nav class="navbar p-centered mx-2"><section class="navbar-section"><a class="navbar-brand" href="/"><img alt="progs_dump" src="/pd_words.png"></a>
+        <div class="col-mx-auto"></div>
         <a class="btn btn-link" href="/what-is-it">What is it?</a>
         <a class="btn btn-link" href="/manual">Manual</a>
         <a class="btn btn-link" href="/download">Download</a>
         <a class="btn btn-link" href="/credits">Credits</a></section></nav>
 <div class="divider"></div>
-<div class="container grid-xl"><div class="card bg-warning"><div class="card-body">This site is under construction - please ignore any formatting errors for now!
-    </div>
-</div><div class="columns"><div class="column col-2"><nav><ul style="list-style: none"><li><a href="/manual">Index</a></li>
-                <li><a href="/manual/spawnflags">Spawnflags</a></li></ul></nav></div>
-     <div class="column col-10"><h1>Spawnflags</h1>
-<h3>Trigger Spawned Monsters</h3>
-The most requested feature of any general purpose Quake mod is trigger spawned monsters. This makes spawning monsters much easier than in the original game. All you need to do is select the Trigger Spawn flag and target the monster with any trigger when you want them to appear. Ambush (from vanilla Quake), will prevent the selected monster from being “awakened” by other monsters nearby. Errant gunfire or seeing the player will wake them up. No Sight Sound will suppress the monster’s “wake up” sound. (e.g. a Shambler will not roar when it sees the player.) You can make passive monsters that will never respond to the player’s actions by selecting Passive always or allow them to wake up and fight with the Passive until attacked spawnflag.
-<br>
-Starting in version 3.0.0 use the Spawn Silently flag to suppress visual and sound effects when a monster trigger spawns. In previous versions, this was enabled with the wait 1 key | value pair. This will still work but has been removed from the FGDs.
-<br>
+<div class="container"><div class="card bg-warning"><div class="card-body">This site is under construction - please ignore any formatting errors for now!
+        </div></div></div>
+<div class="container "><div class="columns my-1"><div class="column col-2         "><nav><ul style="list-style: none"><li><a href="/manual">Installation</a></li>
+                <li class="ml-2"><a href="/manual#dev-notes">Development Notes</a></li>
+                <li><a href="/manual/spawnflags">Spawnflags</a></li>
+                <li class="ml-2"><a class="" href="/manual/spawnflags#trigger-spawn">Trigger Spawned Monsters</a></li>
+                <li class="ml-2"><a class="" href="/manual/spawnflags#appearance-flags">Appearance Flags</a></li></ul></nav></div>
+    <div class="column col-1         divider-vert"></div>
+    <div class="column col-9         "><h1>Spawnflags</h1>
+<div class="divider"></div>
+<div class="my-2"><h4 id="trigger-spawn">Trigger Spawned Monsters</h4>
+    The most requested feature of any general purpose Quake mod is trigger spawned monsters. This makes spawning
+    monsters much easier than in the original game. All you need to do is select the Trigger Spawn flag and target the
+    monster with any trigger when you want them to appear. Ambush (from vanilla Quake), will prevent the selected
+    monster from being “awakened” by other monsters nearby. Errant gunfire or seeing the player will wake them up. No
+    Sight Sound will suppress the monster’s “wake up” sound. (e.g. a Shambler will not roar when it sees the player.)
+    You can make passive monsters that will never respond to the player’s actions by selecting Passive always or allow
+    them to wake up and fight with the Passive until attacked spawnflag.
+    <br>
+    <br>
+    Starting in version 3.0.0 use the Spawn Silently flag to suppress visual and sound effects when a monster trigger
+    spawns. In previous versions, this was enabled with the wait 1 key | value pair. This will still work but has been
+    removed from the FGDs.
 
-<h3>Appearance Flags</h3>
-Nearly every entity in the devkit has an expanded set of “Appearflags” compared to vanilla Quake. These new flags allow you to customize what shows up in a specific mode of the game.
-<ul style="list-style: none"><li>4096   	Not in Coop</li>
-    <li>8192   	Not in Single Player</li>
-    <li>32768  Not on Hard Only</li>
-    <li>65536  Not on Nightmare Only</li></ul>
+</div>
+<div class="divider"></div>
+<div class="my-2"><h4 id="appearance-flags">Appearance Flags</h4>
+    Nearly every entity in the devkit has an expanded set of “Appearflags” compared to vanilla Quake. These new flags
+    allow you to customize what shows up in a specific mode of the game.
 
-Spawnflag 16384 is not used here because it&#39;s already used for something else in progs_dump.
+    <div class="columns my-1"><div class="column col-1         text-right">4096</div>
+        <div class="column col-11         ">Not in Coop</div></div>
+    <div class="columns my-1"><div class="column col-1         text-right">8192</div>
+        <div class="column col-11         ">Not in Single Player</div></div>
+    <div class="columns my-1"><div class="column col-1         text-right">32768</div>
+        <div class="column col-11         ">Not on Hard Only</div></div>
+    <div class="columns my-1"><div class="column col-1         text-right">65536</div>
+        <div class="column col-11         ">Not on Nightmare Only</div></div>
+    Spawnflag 16384 is not used here because it&#39;s already used for something else in progs_dump.
+    <br>
+    <br>
+
+    The new spawnflags complement and complete the set of built-in spawnflags provided by the engine, which of course
+    are:
+
+    <div class="columns my-1"><div class="column col-1         text-right">256</div>
+        <div class="column col-11         ">Not on Easy</div></div>
+    <div class="columns my-1"><div class="column col-1         text-right">512</div>
+        <div class="column col-11         ">Not on Normal</div></div>
+    <div class="columns my-1"><div class="column col-1         text-right">1024</div>
+        <div class="column col-11         ">Not on Hard or Nightmare</div></div>
+    <div class="columns my-1"><div class="column col-1         text-right">2048</div>
+        <div class="column col-11         ">Not in Deathmatch</div></div>
 
 
-The new spawnflags complement and complete the set of built-in spawnflags provided by the engine, which of course are:
+    In conjunction with the old spawnflags, the new spawnflags make it possible to exclude any entity from any
+    combination of game modes and/or skill levels.
+</div>
+<div class="card my-2  "><div class="card-body"><div class="my-2"><h5><em>Not in Coop</em> and <em>Not in Single Player</em></h5>
 
-256    	Not on Easy
-512    	Not on Normal
-1024   	Not on Hard or Nightmare
-2048   	Not in Deathmatch
+    <p>These spawnflags were inspired by Quoth 2 (Kell and Necros, 2008), which included two additional spawnflags for
+        all entities: Not in Coop and Coop Only.</p>
+    <p>In contrast to Quoth 2, the spawnflags implemented here are Not in Coop and Not in Single Player, for symmetry
+        with the built-in Not in Deathmatch spawnflag.</p></div>
+<div class="divider"></div>
+<div class="my-2"><h5><em>Not on Hard Only</em> and <em>Not on Nightmare Only</em></h5>
 
-In conjunction with the old spawnflags, the new spawnflags make it possible to exclude any entity from any combination of game modes and/or skill levels.
-
-<h3><em>Not in Coop</em> and <em>Not in Single Player</em></h3>
-
-These spawnflags were inspired by Quoth 2 (Kell and Necros, 2008), which included two additional spawnflags for all entities: Not in Coop and Coop Only.  In contrast to Quoth 2, the spawnflags implemented here are Not in Coop and Not in Single Player, for symmetry with the built-in Not in Deathmatch spawnflag.
-
-<h3><em>Not on Hard Only</em> and <em>Not on Nightmare Only</em></h3>
-
-The set of built-in spawnflags doesn&#39;t allow a mapper to treat the Hard and Nightmare skill levels differently, because it only includes one spawnflag, 1024, which excludes an entity from both Hard and Nightmare. The new Not on Hard Only and Not on Nightmare Only spawnflags allow the mapper to exclude an entity from one of these skill levels without affecting the other. The original spawnflag will supersede the new flags.</div></div></div>
+    <p>The set of built-in spawnflags doesn&#39;t allow a mapper to treat the Hard and Nightmare skill levels differently,
+        because it only includes one spawnflag, 1024, which excludes an entity from both Hard and Nightmare. </p>
+    <p>The new Not on Hard Only and Not on Nightmare Only spawnflags allow the mapper to exclude an entity from one of
+        these skill levels without affecting the other.</p>
+    <p>The original spawnflag will supersede the new flags.</p></div></div></div></div></div></div>
 
 
-		<script type="module" data-sveltekit-hydrate="lj84as">
-		import { start } from "/_app/immutable/start-d371e788.js";
+		<script type="module" data-sveltekit-hydrate="1696liu">
+		import { start } from "/_app/immutable/start-194475fe.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="lj84as"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="1696liu"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -76,7 +116,7 @@ The set of built-in spawnflags doesn&#39;t allow a mapper to treat the Hard and 
 			hydrate: {
 				status: 200,
 				error: null,
-				nodes: [0, 2, 8],
+				nodes: [0, 2, 10],
 				params: {},
 				routeId: "manual/spawnflags"
 			}

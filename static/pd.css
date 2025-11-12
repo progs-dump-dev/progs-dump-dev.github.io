@@ -441,7 +441,7 @@ h6 {
   font-weight: 500;
   line-height: 1.2;
   margin-bottom: 0.5em;
-  margin-top: 0;
+  margin-top: 0.5em;
 }
 
 .h1,
@@ -3387,4 +3387,15 @@ a.text-error:visited {
   word-wrap: break-word;
 }
 
+.container-noscroll{
+    max-height: calc(100vh - 60px);
+    overflow: hidden
+}
+
+.manual-indent-1{
+        margin-left: 0.4rem !important;
+}
+.manual-indent-2{
+    margin-left: 0.8rem !important;
+}
 /*# sourceMappingURL=pd.css.map */

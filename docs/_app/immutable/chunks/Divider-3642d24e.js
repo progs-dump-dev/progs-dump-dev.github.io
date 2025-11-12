@@ -1,1 +1,0 @@
-import{S as r,i as c,s as o,e as l,c as d,a as h,d as a,b as m,g as u,n as t}from"./index-3d24b05e.js";function f(i){let e;return{c(){e=l("div"),this.h()},l(s){e=d(s,"DIV",{class:!0}),h(e).forEach(a),this.h()},h(){m(e,"class","divider")},m(s,n){u(s,e,n)},p:t,i:t,o:t,d(s){s&&a(e)}}}class v extends r{constructor(e){super(),c(this,e,null,f,o,{})}}export{v as D};

@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { PUBLIC_BUILD_TARGET } from '$env/static/public';
 	import favicon from '$lib/assets/favicon.svg';
 
 	let { children } = $props();
@@ -8,8 +7,6 @@
 <svelte:head>
 	<link rel="icon" href={favicon} />
 </svelte:head>
-{#if PUBLIC_BUILD_TARGET === 'manual'}
-{:else}
 <nav class="navbar p-centered mx-2">
 	<section class="navbar-section">
 		<a class="navbar-brand" href="/"><img alt="progs_dump" src="/pd_words.png"></a>
@@ -21,7 +18,6 @@
 	</section>
 </nav>
 <div class="divider"></div>
-{/if}
 <!--<div class="container">-->
 <!--	<div class="card bg-warning">-->
 <!--		<div class="card-body">-->
